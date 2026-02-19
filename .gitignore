@@ -1,0 +1,15 @@
+# --- ENVIRONNEMENT VIRTUEL ---
+venv/
+env/
+.env
+
+# --- DONNÉES ET RÉSULTATS ---
+# pour ne pas importer les csv déjà créés
+*.csv
+
+# --- CACHE ET SYSTÈME ---
+# Fichiers temporaires créés par Python, OS ou windows
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
