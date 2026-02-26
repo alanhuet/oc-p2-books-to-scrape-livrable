@@ -11,7 +11,7 @@ def extracteur_donnees(url_livre):
     date_formatee = maintenant.strftime("%Y-%m-%d")
 
     #2.ACQUISITION DU CONTENU HTML
-    reponse = requests.get(url)
+    reponse = requests.get(url_livre)
     page = reponse.content
     soup = BeautifulSoup(page, "html.parser")
 
@@ -62,10 +62,12 @@ def extracteur_donnees(url_livre):
     }
     #5.CRÉATION DU FICHIER CSV  
 
-    titre_clean = slugify(dict_final["title"])
-    NomFichier = f"{titre_clean}_extract_{date_formatee}.csv"
+    #titre_clean = slugify(dict_final["title"])
+    #NomFichier = f"{titre_clean}_extract_{date_formatee}.csv"
 
-    with open(NomFichier, "w", encoding="utf8", newline="") as csv_file:
-        writer = csv.DictWriter(csv_file, fieldnames=dict_final.keys())
-        writer.writeheader()
-        writer.writerow(dict_final)
+    #with open(NomFichier, "w", encoding="utf8", newline="") as csv_file:
+        #writer = csv.DictWriter(csv_file, fieldnames=dict_final.keys())
+        #writer.writeheader()
+        #writer.writerow(dict_final)
+
+    return dict_final    
