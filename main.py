@@ -6,7 +6,15 @@ from slugify import slugify
 from scrap_book import extracteur_donnees
 from urllib.parse import urljoin 
 
-url_categorie = "https://books.toscrape.com/catalogue/category/books/fiction_10/index.html"
+url_site = "https://books.toscrape.com/index.html"
+response_accueil = requests.get(url_site)
+soup_accueil = BeautifulSoup(response_accueil.content, "html.parser")
+
+liens_categories = []
+menu_categories = soup_accueil.find("div", class_"side_categories").find("ul").find("ul")
+
+
+
 toutes_les_donnees = []
 
 while url_categorie:
