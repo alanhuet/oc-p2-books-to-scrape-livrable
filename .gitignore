@@ -4,8 +4,10 @@ env/
 .env
 
 # --- DONNÉES ET RÉSULTATS ---
-# pour ne pas importer les csv déjà créés
+# pour ne pas importer les fichiers et dossiers déjà créés
+all_books/
 *.csv
+*.jpg
 
 # --- CACHE ET SYSTÈME ---
 # Fichiers temporaires créés par Python, OS ou windows
