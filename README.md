@@ -2,6 +2,23 @@
 
 This program allows the user to scrape books from the website [Books to Scrape](https://www.books.toscrape.com)
 
+## Setup Instructions
+
+### 1. Create the Virtual Environment
+```bash
+python -m venv venv
+```
+
+### 2. Activate the Virtual Environment
+- **On macOS/Linux:**
+```bash
+source venv/bin/activate
+```
+- **On Windows:**
+```bash
+venv\Scripts\activate
+```
+
 ## Installation
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install Book Scraper.
